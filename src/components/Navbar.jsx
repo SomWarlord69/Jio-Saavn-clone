@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const searchSongs = async (e) => {
     const res = await axios.get(
-      `https://saavn.me/search/songs?query=${e.target.value}&page=1&limit=2`
+      `https://jio-savan-api-sigma.vercel.app/search/songs?query=${e.target.value}&page=1&limit=10`
     );
     const { data } = await res.data;
     if (

@@ -8,7 +8,7 @@ const MainSection = () => {
   const [trending, setTrending] = useState([]);
 
   const getHomePageData = async () => {
-    const res = await axios.get("https://saavn.me/modules?language=hindi");
+    const res = await axios.get("https://jio-savan-api-sigma.vercel.app/modules?language=hindi,punjabi,tamil,odia");
     const { data } = res.data;
     setAlbums(data.albums);
     setTrending(data.trending);
